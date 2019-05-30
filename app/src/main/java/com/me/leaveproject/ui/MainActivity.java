@@ -1,4 +1,4 @@
-package com.me.leaveproject;
+package com.me.leaveproject.ui;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -19,6 +19,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.me.leaveproject.R;
+import com.me.leaveproject.entity.builderMode.BEntity;
+import com.me.leaveproject.entity.HungryEntity;
+import com.me.leaveproject.entity.LazyEntity;
+import com.me.leaveproject.ui.test.SingleTopActivity;
 
 import java.util.List;
 
@@ -82,7 +88,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		}).start();*/
 		System.out.println("timeStamp==> "+System.currentTimeMillis());
 		sendNotificationChannel();
-		post();
+//		post();
+
+//		testSingleInstance();
+
+		cleanTask();
+	}
+
+	private void cleanTask() {
+		BEntity entity = new BEntity.Builder()
+				.name("name").age(11).sex(true).build();
+	}
+
+	private void testSingleInstance() {
+
+		HungryEntity hungry = HungryEntity.getInstance();
+		HungryEntity h = HungryEntity.getInstance();
+		System.out.println("hungry hash=> "+hungry.toString()+" h hash=> "+h.toString());
+
+		LazyEntity lazy = LazyEntity.getInstance();
+		LazyEntity l = LazyEntity.getInstance();
+		System.out.println("lazy hash=> "+ lazy.toString()+" l hash=> "+l.toString());
+
 	}
 
 	private void sendNotificationChannel() {
@@ -159,7 +186,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	public void onClick(View v) {
 		switch (v.getId()){
 			case R.id.chatBtn:
-				sendChatNotify("点击的");
+				startActivity(new Intent(this,SingleTopActivity.class));
+//				sendChatNotify("点击的");
 				break;
 			case R.id.subscribeBtn:
 				sendSubscribeNotify();
