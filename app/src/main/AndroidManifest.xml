@@ -18,9 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.test.SingleTopActivity"
-            android:launchMode="singleTop"
-            >
+        <activity
+            android:name=".ui.test.SingleTopActivity"
+            android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".ui.test.SQLiteActivity">
         </activity>
     </application>
 

@@ -42,5 +42,12 @@
             
             
     
+    Android SQLite简单使用 @See SQLiteActivity
+    
+    创建：SQLiteOpenHelper的封装，使得我们创建数据库变得异常简单，只需要
+    实例化SQLiteOpenHelper子类的对象，接着调用getWritableDatabase()
+    或getReadableDatabase()即可得到数据库的引用。
+    
+[SQLite参考]https://www.jianshu.com/p/3ecb2c7e144e
     
 [推送平台]http://sc.ftqq.com/3.version
