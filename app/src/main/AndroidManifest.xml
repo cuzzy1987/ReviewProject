@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.me.leaveproject">
 
     <application
@@ -23,6 +24,12 @@
             android:launchMode="singleTop">
         </activity>
         <activity android:name=".ui.test.SQLiteActivity">
+        </activity>
+        <activity android:name=".ui.test.FormActivity">
+        </activity>
+        <activity android:name=".base.BaseActivity">
+        </activity>
+        <activity android:name=".ui.test.SlidingPaneActivity">
         </activity>
     </application>
 

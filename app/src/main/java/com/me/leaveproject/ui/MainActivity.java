@@ -21,10 +21,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.me.leaveproject.R;
-import com.me.leaveproject.entity.builderMode.BEntity;
 import com.me.leaveproject.entity.HungryEntity;
 import com.me.leaveproject.entity.LazyEntity;
+import com.me.leaveproject.entity.builderMode.BEntity;
+import com.me.leaveproject.ui.test.FormActivity;
 import com.me.leaveproject.ui.test.SingleTopActivity;
+import com.me.leaveproject.ui.test.SlidingPaneActivity;
 
 import java.util.List;
 
@@ -68,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 		findViewById(R.id.chatBtn).setOnClickListener(this);
 		findViewById(R.id.subscribeBtn).setOnClickListener(this);
+		findViewById(R.id.navigationBtn).setOnClickListener(this);
+		findViewById(R.id.navigation2Btn).setOnClickListener(this);
 		init();
 
 	}
@@ -191,6 +195,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				break;
 			case R.id.subscribeBtn:
 				sendSubscribeNotify();
+				break;
+			case R.id.navigationBtn:
+				startActivity(new Intent(this,FormActivity.class));
+				break;
+			case R.id.navigation2Btn:
+				startActivity(new Intent(this,SlidingPaneActivity.class));
 				break;
 		}
 	}

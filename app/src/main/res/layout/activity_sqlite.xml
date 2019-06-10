@@ -7,7 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".ui.test.SQLiteActivity">
 
+    <include layout="@layout/include_toolbar_layout"/>
+
     <Button
+        app:layout_constraintTop_toBottomOf="@+id/appbarLayout"
         android:id="@+id/createBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

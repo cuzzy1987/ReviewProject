@@ -2,14 +2,15 @@ package com.me.leaveproject.ui.test;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
 import com.me.leaveproject.R;
+import com.me.leaveproject.base.BaseActivity;
 import com.me.leaveproject.db.DatabaseHelper;
 
-public class SQLiteActivity extends AppCompatActivity implements View.OnClickListener {
+public class SQLiteActivity extends BaseActivity implements View.OnClickListener {
 
 
 	private DatabaseHelper databaseHelper;
@@ -21,16 +22,18 @@ public class SQLiteActivity extends AppCompatActivity implements View.OnClickLis
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_sqlite);
 		init();
 	}
 
 	private void init() {
+		Toolbar toolbar = findViewById(R.id.toolbar);
+		setToolbar(toolbar);
 		initView();
 	}
 
 	/* 初始化控件 */
 	private void initView() {
-		setContentView(R.layout.activity_sqlite);
 		findViewById(R.id.createBtn).setOnClickListener(this);
 		findViewById(R.id.insertTv).setOnClickListener(this);
 		findViewById(R.id.deleteBtn).setOnClickListener(this);
@@ -84,6 +87,6 @@ public class SQLiteActivity extends AppCompatActivity implements View.OnClickLis
 	/* 创建数据库表 */
 	private void createTable() {
 		/* 该方法会调用 Helper的初始哈方法*/
-		databaseHelper.getWritableDatabase();
+//		databaseHelper.getWritableDatabase();
 	}
 }
