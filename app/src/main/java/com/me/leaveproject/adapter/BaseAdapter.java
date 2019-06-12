@@ -40,6 +40,12 @@ public class BaseAdapter  extends RecyclerView.Adapter<BaseAdapter.BaseViewHolde
         return list==null?0:list.size();
     }
 
+
+    @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
+    }
+
     class BaseViewHolder extends RecyclerView.ViewHolder{
 
         TextView deleteTv,surfaceTv;
