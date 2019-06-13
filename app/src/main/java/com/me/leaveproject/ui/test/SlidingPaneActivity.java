@@ -16,12 +16,6 @@ import com.me.leaveproject.base.BaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.support.v7.widget.RecyclerView.SCROLL_STATE_DRAGGING;
-import static android.support.v7.widget.RecyclerView.SCROLL_STATE_IDLE;
-import static android.support.v7.widget.RecyclerView.SCROLL_STATE_SETTLING;
-import static android.view.View.SCREEN_STATE_OFF;
-import static android.view.View.SCREEN_STATE_ON;
-
 public class SlidingPaneActivity extends BaseActivity implements SlidingPaneLayout.PanelSlideListener{
 
 	private RecyclerView recyclerView;
@@ -60,22 +54,35 @@ public class SlidingPaneActivity extends BaseActivity implements SlidingPaneLayo
 		recyclerView.setAdapter(mAdapter);
 		recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
 		recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-			@Override
+			/*@Override
 			public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
 				super.onScrollStateChanged(recyclerView, newState);
 				switch (newState){
-					case SCROLL_STATE_IDLE:/* 滚动停止 */
+					case SCROLL_STATE_IDLE:*//* 滚动停止 *//*
 						System.out.println("-=滚动停止=-");
 						break;
-					case SCROLL_STATE_DRAGGING:/* 手指滑动 */
+					case SCROLL_STATE_DRAGGING:*//* 手指滑动 *//*
 						System.out.println("-=手指滑动=-");
 						break;
-					case SCROLL_STATE_SETTLING:/* 惯性滑动 */
+					case SCROLL_STATE_SETTLING:*//* 惯性滑动 *//*
 						System.out.println("-=惯性滑动=-");
 						break;
 
 				}
-			}
+
+				*//* 判断可视条目位置的方法 *//*
+				*//* 配合停止滑动等手势判断 *//*
+				RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
+				if (layoutManager instanceof  LinearLayoutManager){
+					LinearLayoutManager linearLayoutManager = (LinearLayoutManager) layoutManager;
+					int firstItemPosition = linearLayoutManager.findFirstVisibleItemPosition();
+					int lastItemPosition = linearLayoutManager.findLastVisibleItemPosition();
+					int lastCompletelyItemPosition = linearLayoutManager.findLastCompletelyVisibleItemPosition();
+					System.out.println("首个可视条目位置=> "+firstItemPosition+"\n末尾可视条目位置=> "
+							+lastItemPosition+"\n末尾完整可见视图位置=> "+lastCompletelyItemPosition +"");
+				}
+
+			}*/
 
 			@Override
 			public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
