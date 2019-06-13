@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".ui.test.SlidingPaneActivity">
         </activity>
+        <activity android:name=".ui.test.WebActivity">
+        </activity>
     </application>
 
 </manifest>
