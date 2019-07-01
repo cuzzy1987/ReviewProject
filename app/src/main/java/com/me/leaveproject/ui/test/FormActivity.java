@@ -2,6 +2,7 @@ package com.me.leaveproject.ui.test;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,5 +51,21 @@ public class FormActivity extends BaseActivity implements View.OnClickListener  
 
 	private void checkData() {
 //		Observable.combineLatest(param1Et,param2Et,param3Et,param4Et,new Func)
+	}
+
+	@Override
+	public void onUserInteraction() {
+		super.onUserInteraction();
+	}
+
+	/* Activity 分发touch事件 */
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent ev) {
+		return super.dispatchTouchEvent(ev);
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		return super.onTouchEvent(event);
 	}
 }
