@@ -1,4 +1,4 @@
-package com.me.leaveproject;
+package com.me.leaveproject.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

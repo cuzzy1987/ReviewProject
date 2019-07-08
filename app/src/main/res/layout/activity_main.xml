@@ -18,10 +18,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!--<com.me.leaveproject.RationBarView
-        app:layout_constraintTop_toBottomOf="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>-->
     <Button
         android:id="@+id/chatBtn"
         android:layout_width="wrap_content"
