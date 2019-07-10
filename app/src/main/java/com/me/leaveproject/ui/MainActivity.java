@@ -27,6 +27,7 @@ import com.me.leaveproject.entity.builderMode.BEntity;
 import com.me.leaveproject.ui.test.FormActivity;
 import com.me.leaveproject.ui.test.SingleTopActivity;
 import com.me.leaveproject.ui.test.SlidingPaneActivity;
+import com.me.leaveproject.ui.test.ViewPagerActivity;
 
 import java.util.List;
 
@@ -197,7 +198,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				sendSubscribeNotify();
 				break;
 			case R.id.navigationBtn:
-				startActivity(new Intent(this,FormActivity.class));
+//				startActivity(new Intent(this,FormActivity.class));
+				startActivity(new Intent(this, ViewPagerActivity.class));
 				break;
 			case R.id.navigation2Btn:
 				startActivity(new Intent(this,SlidingPaneActivity.class));
