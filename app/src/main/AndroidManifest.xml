@@ -28,6 +28,8 @@
         <activity android:name=".ui.test.FormActivity" />
         <activity android:name=".base.BaseActivity" />
         <activity android:name=".ui.test.SlidingPaneActivity" />
+        <activity android:name=".ui.test.WebActivity">
+        </activity>
     </application>
 
 </manifest>
