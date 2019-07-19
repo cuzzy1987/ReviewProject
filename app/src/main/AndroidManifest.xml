@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.test.ViewPagerActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".ui.test.RegisterActivity" />
+        <activity android:name=".ui.test.DataBindingActivity" />
+        <activity android:name=".ui.test.ViewPagerActivity" />
         <activity android:name=".ui.test.ListActivity" />
         <activity
             android:name=".ui.MainActivity"
@@ -28,8 +31,7 @@
         <activity android:name=".ui.test.FormActivity" />
         <activity android:name=".base.BaseActivity" />
         <activity android:name=".ui.test.SlidingPaneActivity" />
-        <activity android:name=".ui.test.WebActivity">
-        </activity>
+        <activity android:name=".ui.test.WebActivity" />
     </application>
 
 </manifest>

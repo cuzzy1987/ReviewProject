@@ -20,11 +20,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.me.leaveproject.LoginActivity;
 import com.me.leaveproject.R;
 import com.me.leaveproject.entity.HungryEntity;
 import com.me.leaveproject.entity.LazyEntity;
 import com.me.leaveproject.entity.builderMode.BEntity;
 import com.me.leaveproject.ui.test.FormActivity;
+import com.me.leaveproject.ui.test.RegisterActivity;
 import com.me.leaveproject.ui.test.SingleTopActivity;
 import com.me.leaveproject.ui.test.SlidingPaneActivity;
 import com.me.leaveproject.ui.test.ViewPagerActivity;
@@ -199,7 +201,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				break;
 			case R.id.navigationBtn:
 //				startActivity(new Intent(this,FormActivity.class));
-				startActivity(new Intent(this, ViewPagerActivity.class));
+//				startActivity(new Intent(this, ViewPagerActivity.class));
+//				startActivity(new Intent(this, RegisterActivity.class));
+				startActivity(new Intent(this, LoginActivity.class));
+
 				break;
 			case R.id.navigation2Btn:
 				startActivity(new Intent(this,SlidingPaneActivity.class));

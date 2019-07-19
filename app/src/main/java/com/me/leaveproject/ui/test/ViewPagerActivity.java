@@ -12,6 +12,7 @@ import com.me.leaveproject.R;
 import com.me.leaveproject.adapter.ViewPagerAdapter;
 import com.me.leaveproject.base.BaseActivity;
 import com.me.leaveproject.callback.ViewPagerItemClickListener;
+import com.me.leaveproject.view.CustomTestTextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,8 @@ public class ViewPagerActivity extends BaseActivity implements ViewPagerItemClic
 
     private Toolbar mToolBar;
     private ViewPager mViewPager;
-    private TextView hintTv;
+//    private TextView hintTv;
+    private CustomTestTextView hintTv;
     private ViewPagerAdapter mAdapter;
 
     public static final String TAG = "ViewPagerActivity";

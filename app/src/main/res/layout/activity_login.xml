@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".LoginActivity">
+
+    <include layout="@layout/include_top_bar_layout"/>
+
+
+    <!-- 使用线性布局的原因是需要嵌套ScrollView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/topRl"
+        app:layout_constraintBottom_toTopOf="@+id/botSloganTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        >
+
+        <!-- 定高是因为可以扩大点击范围 -->
+        <TextView
+            android:id="@+id/brandTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="北银消费金融"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textScaleX="1.1"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            />
+
+        <!-- 上下两个输入框底部线需要等长 使用一个相对布局包裹 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="50dp"
+            >
+
+            <TextView
+                android:id="@+id/phoneTv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="手机号："
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                />
+            <EditText
+                android:id="@+id/phoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toEndOf="@+id/phoneTv"
+                android:background="@null"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:inputType="number|phone"
+                android:hint="请输入手机号"
+                />
+            <View
+                android:layout_below="@+id/phoneEt"
+                android:id="@+id/phone_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                android:layout_alignStart="@id/phoneEt"
+                android:layout_alignEnd="@+id/phoneEt"
+                />
+            <TextView
+                android:layout_below="@+id/phoneTv"
+                android:id="@+id/pwTv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="密码："
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_alignStart="@+id/phoneTv"
+                />
+            <EditText
+                android:id="@+id/pwEt"
+                android:layout_alignStart="@+id/phoneEt"
+                android:layout_alignEnd="@id/phoneEt"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/phoneEt"
+                android:layout_toEndOf="@+id/pwTv"
+                android:background="@null"
+                android:layout_marginTop="20dp"
+                android:layout_centerVertical="true"
+                android:hint="请输入登录密码"
+                />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignStart="@+id/phoneEt"
+                android:layout_alignEnd="@id/phoneEt"
+                android:background="#EEEEEE"
+                android:layout_below="@+id/pwEt"
+                />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:background="@drawable/shape_next_step_bg"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/registerTv"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="立即注册"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginStart="30dp"
+                />
+            <TextView
+                android:id="@+id/forgotTv"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="忘记密码"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginEnd="30dp"
+                android:layout_alignParentEnd="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/wxLl"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ImageView
+                    android:id="@+id/wxIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/wx"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/wxTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信快速登录"
+                    android:textSize="16sp"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/wxLl"
+                android:orientation="horizontal"
+                android:id="@+id/msgLl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                >
+                <ImageView
+                    android:id="@+id/msgIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/phone"
+
+                    />
+                <TextView
+                    android:id="@+id/msgTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="手机短信登录"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_below="@id/msgLl"
+                android:layout_marginTop="15dp"
+                android:id="@+id/moreTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="更多登录方式"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/botSloganTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="北京银行独资设立的首家消费金融公司"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        />
+
+</android.support.constraint.ConstraintLayout>
